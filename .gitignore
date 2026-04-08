@@ -1,0 +1,15 @@
+## .NET build artifacts
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+*.userprefs
+*.DS_Store
+
+## DotVVM temp files
+dotvvm_serialized_config.json.tmp
+
+## Visual Studio cache
+.vs/

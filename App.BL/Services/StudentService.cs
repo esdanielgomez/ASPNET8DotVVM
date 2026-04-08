@@ -44,7 +44,8 @@ public class StudentService
 
     public async Task UpdateStudentAsync(StudentDetailModel student)
     {
-        var entity = await _studentDbContext.Students.FirstOrDefaultAsync(s => s.Id == student.Id);
+        var entity = await _studentDbContext.Students.FirstOrDefaultAsync(s => s.Id == student.Id)
+            ?? throw new InvalidOperationException($"Student with id {student.Id} was not found.");
 
         entity.FirstName = student.FirstName;
         entity.LastName = student.LastName;

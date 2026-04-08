@@ -7,7 +7,7 @@ public partial class StudentDbContext : DbContext
     public StudentDbContext() { }
     public StudentDbContext(DbContextOptions<StudentDbContext> options) : base(options) { }
 
-    public virtual DbSet<Student> Students { get; set; }
+    public virtual DbSet<Student> Students { get; set; } = null!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) { }
 

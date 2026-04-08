@@ -13,11 +13,12 @@ public class DetailViewModel : MasterPageViewModel
         _studentService = studentService;
     }
 
-    public StudentDetailModel Student { get; set; }
+    public StudentDetailModel Student { get; set; } = new();
 
     public override async Task PreRender()
     {
-        var id = Convert.ToInt32(Context.Parameters["Id"]);
+        if (!int.TryParse(Context!.Parameters!["Id"]?.ToString(), out var id))
+            throw new InvalidOperationException("Invalid or missing student ID in route parameters.");
         Student = await _studentService.GetStudentByIdAsync(id);
         await base.PreRender();
     }

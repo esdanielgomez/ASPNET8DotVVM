@@ -7,7 +7,7 @@ public class EditViewModel : MasterPageViewModel
 {
     private readonly StudentService _studentService;
 
-    public StudentDetailModel Student { get; set; }
+    public StudentDetailModel Student { get; set; } = new();
 
     public EditViewModel(StudentService studentService)
     {

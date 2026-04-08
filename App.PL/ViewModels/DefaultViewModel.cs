@@ -16,7 +16,7 @@ public class DefaultViewModel : MasterPageViewModel
     }
 
     [Bind(Direction.ServerToClient)]
-    public List<StudentListModel> Students { get; set; }
+    public List<StudentListModel> Students { get; set; } = [];
 
     public override async Task PreRender()
     {
