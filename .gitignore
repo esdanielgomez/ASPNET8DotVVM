@@ -1,0 +1,10 @@
+## Build outputs
+bin/
+obj/
+
+## User-specific files
+*.user
+*.suo
+
+## DotVVM temp files
+dotvvm_serialized_config.json.tmp
