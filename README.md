@@ -1,1 +1,1 @@
-# Web application demo with ASP.NET 8
+# Web application demo with ASP.NET 10
